@@ -5,7 +5,8 @@ cap = cv.VideoCapture('image/Video.mp4')
 while cap.isOpened():
     ref,frame = cap.read()#ref is boolean status read image#frame is image
     if ref is True:
-        cv.imshow('openVideo',frame)
+        grayImage = cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
+        cv.imshow('openVideo',grayImage)
     else:
         break
     if cv.waitKey(1) and 0xFF == ord("e"):
