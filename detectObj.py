@@ -3,7 +3,7 @@ import numpy as np
 
 while True:
     img = cv.imread('image/bottleCap.jpg')
-    img = cv.resize(img,(400,400))
+    img = cv.resize(img,(600,600))
     hsv = cv.cvtColor(img,cv.COLOR_BGR2HSV)
 
     #min and max color of object
